@@ -7,14 +7,14 @@ const handleAddCoffee = event=>{
     event.preventDefault()
     const form = event.target 
     const name = form.name.value
-    const supplier = form.supplier.value
-    const category = form.category.value
     const chef = form.chef.value
+    const category = form.category.value
+    const quantity = form.quantity.value
     const teste = form.teste.value
     const details = form.details.value
     const photo = form.photo.value
 
-    const newCoffee = {name,supplier,category,chef,teste,details,photo}
+    const newCoffee = {name,chef,category,quantity,teste,details,photo}
     console.log(newCoffee)
     fetch('http://localhost:5000/coffee', {
       method:"POST",
@@ -48,14 +48,14 @@ const handleAddCoffee = event=>{
                 <div  className="w-full ">
                   <label className="fieldset-label">Name</label>
                   <input type="text" name="name" className="input w-full" placeholder="Enter Coffee Name" />
-                  <label className="fieldset-label">Suplier</label>
-                  <input type="text" name="supplier" className="input w-full" placeholder="Enter Coffee Name" />
+                  <label className="fieldset-label">Chef</label>
+                  <input type="text" name="chef" className="input w-full" placeholder="Enter Coffee Name" />
                   <label className="fieldset-label">Category</label>
                   <input type="text" name="category" className="input w-full" placeholder="Enter Coffee Name" />
                 </div>
                 <div className="w-full">
-                  <label className="fieldset-label">Chef</label>
-                  <input type="text" name="chef" className="input w-full" placeholder="Enter Chef Name" />
+                  <label className="fieldset-label">Quantity</label>
+                  <input type="text" name="quantity" className="input w-full" placeholder="Enter Quantity" />
                   <label className="fieldset-label">Teste</label>
                   <input type="text" name="teste" className="input w-full" placeholder="Enter Coffee Teste" />
                   <label className="fieldset-label">Details</label>
