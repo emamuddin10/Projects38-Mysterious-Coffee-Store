@@ -11,6 +11,7 @@ import UpdateCoffee from './components/UpdateCoffee.jsx';
 import HomeLayout from './components/HomeLayout.jsx';
 import SignUp from './components/SignUp.jsx';
 import Signin from './components/Signin.jsx';
+import AuthProvider from './provider/AuthProvider.jsx';
 // import Home from './components/Home.jsx';
 
 const router = createBrowserRouter([
@@ -50,6 +51,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+       <RouterProvider router={router} /> 
+    </AuthProvider>
   </StrictMode>,
 )
