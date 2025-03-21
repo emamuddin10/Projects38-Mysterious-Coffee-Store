@@ -23,7 +23,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <App></App>,
-        loader: ()=> fetch('https://projects38-mysterious-coffee-server-h86vjspxt.vercel.app/coffee')
+        loader: ()=> fetch('https://projects38-mysterious-coffee-server.vercel.app/coffee')
       },
       {
         path:'/addCoffee',
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
       {
         path:'/updateCoffee/:id',
         element:<UpdateCoffee></UpdateCoffee>,
-        loader:({params})=> fetch(`https://projects38-mysterious-coffee-server-h86vjspxt.vercel.app/coffee/${params.id}`)
+        loader:({params})=> fetch(`https://projects38-mysterious-coffee-server.vercel.app/coffee/${params.id}`)
       },
       {
         path:'signUp',
@@ -45,7 +45,7 @@ const router = createBrowserRouter([
       {
         path:'/users',
         element:<UserData></UserData>,
-        loader:()=> fetch('https://projects38-mysterious-coffee-server-h86vjspxt.vercel.app/users/')
+        loader:()=> fetch('https://projects38-mysterious-coffee-server.vercel.app/users/')
       }
     ]
   }
