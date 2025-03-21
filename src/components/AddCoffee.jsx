@@ -16,7 +16,7 @@ const handleAddCoffee = event=>{
 
     const newCoffee = {name,chef,category,quantity,teste,details,photo}
     console.log(newCoffee)
-    fetch('https://projects38-mysterious-coffee-server-h86vjspxt.vercel.app/coffee', {
+    fetch('https://projects38-mysterious-coffee-server.vercel.app/coffee', {
       method:"POST",
       headers:{
         'content-type':'application/json'
