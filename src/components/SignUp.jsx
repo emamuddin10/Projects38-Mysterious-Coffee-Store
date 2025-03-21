@@ -25,7 +25,7 @@ const SignUp = () => {
           const newUser = {name,email,creationTime}
 
           //  send data to the server and mongoDB
-          fetch('https://projects38-mysterious-coffee-server-h86vjspxt.vercel.app/users',{
+          fetch('https://projects38-mysterious-coffee-server.vercel.app/users',{
             method:"POST",
             headers:{
               "content-type":'application/json'
