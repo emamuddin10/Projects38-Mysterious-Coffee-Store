@@ -18,7 +18,7 @@ const UserData = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         // fetch and send the data to sever api
-        fetch(`https://projects38-mysterious-coffee-server-h86vjspxt.vercel.app/users/${id}`, {
+        fetch(`https://projects38-mysterious-coffee-server.vercel.app/users/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
